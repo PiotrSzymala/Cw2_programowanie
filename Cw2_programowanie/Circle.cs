@@ -72,4 +72,14 @@ public class Circle
 
         Ray = ray;
     }
+    
+    public static bool AreCirclesEven (Circle c1, Circle c2)
+    {
+        if (c1.Ray == c2.Ray)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
