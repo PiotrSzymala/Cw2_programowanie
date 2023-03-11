@@ -2,7 +2,27 @@ namespace Cw2_programowanie;
 
 public class Circle
 {
-    public double Ray { get; set; }
+    private double _ray;
+    public double Ray
+    {
+        get
+        {
+            return _ray;
+        }
+        set
+        {
+            if (value > 0)
+            {
+                _ray = value;
+            }
+            else
+            {
+                throw new Exception("Ray cannot equal or be less than zero");
+            }
+            
+        }
+    }
+    
     public Circle()
     {
         Ray = 1;
@@ -14,9 +34,7 @@ public class Circle
         {
             throw new Exception("Ray cannot equal or be less than zero");
         }
-        else
-        {
-            Ray = ray;
-        }
+
+        Ray = ray;
     }
 }
