@@ -14,6 +14,7 @@ public class Circle
             if (value > 0)
             {
                 _ray = value;
+                _diameter = value * 2;
             }
             else
             {
@@ -22,6 +23,40 @@ public class Circle
             
         }
     }
+
+    private double _diameter;
+    public double Diameter
+    {
+        get
+        {
+            return _diameter;
+        }
+        set
+        {
+            _diameter = value;
+            _ray = value / 2;
+        }
+        
+    }
+    
+    public double Field
+    {
+        get
+        {
+            return Math.PI * Math.Pow(_ray, 2);
+        }
+        
+    }
+
+    public double Circumference
+    {
+        get
+        {
+            return Math.PI * 2 * _ray;
+        }
+    }
+    
+    
     
     public Circle()
     {
