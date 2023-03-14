@@ -2,6 +2,12 @@ namespace Cw2_programowanie;
 public class Point
 {
     public int X, Y;
+
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
 }
 
 public class Quadruple
@@ -16,25 +22,35 @@ public class Quadruple
         }
         set
         {
-            
+            _circumference = value;
         }
     }
-    public Point X1 { get; set; }
-    public Point Y1 { get; set; }
-    public Point X2 { get; set; }
-    public Point Y2 { get; set; }
+    public Point A { get; set; }
+    public Point B { get; set; }
+    public Point C { get; set; }
+    public Point D { get; set; }
+
     
-    
-    public Quadruple(Point x1, Point y1, Point x2, Point y2)
+    public Quadruple(Point a, Point b, Point c, Point d)
     {
-        X1 = x1;
-        Y1 = y1;
-        X2 = x2;
-        Y2 = y2;
+        A = a;
+        B = b;
+        C = c;
+        D = d;
     }
 
-    public double CalculateDistance(Point p1, Point p2)
+    public static double CalculateDistance(Point p1, Point p2)
     {
-        return ((p1.X - p2.X) * (p1.X - p2.X) + (p1.Y - p2.Y) * (p1.Y - p2.Y));
+        return Math.Sqrt((Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2)));
+    }
+
+    public static double CalculateCircumference(Point a, Point b, Point c, Point d)
+    {
+        var ab = CalculateDistance(a, b);
+        var bc = CalculateDistance(b, c);
+        var cd = CalculateDistance(c, d);
+        var da = CalculateDistance(d, a);
+
+        return ab + bc + cd + da;
     }
 }
