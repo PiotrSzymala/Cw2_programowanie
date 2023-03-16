@@ -17,7 +17,6 @@ public class Student
     }
 
     private string _surname;
-
     public string Surname
     {
         get
@@ -32,7 +31,37 @@ public class Student
             }
         }
     }
-    
-    public int NrOfTheAlbum { get; set; }
-    public double AverageGrade { get; set; }
+
+    private int _nrOfTheAlbum;
+    public int NrOfTheAlbum
+    {
+        get
+        {
+            return _nrOfTheAlbum;
+        }
+        set
+        {
+            if (value > 0)
+            {
+                _nrOfTheAlbum = value;
+            }
+        }
+    }
+
+    private double _averageGrade;
+
+    public double AverageGrade
+    {
+        get
+        {
+            return _averageGrade;
+        }
+        set
+        {
+            if (value > 0)
+            {
+                _averageGrade = value;
+            }
+        }
+    }
 }
