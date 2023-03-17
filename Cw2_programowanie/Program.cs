@@ -36,6 +36,12 @@ Console.WriteLine(q1.Circumference);
 
 Console.WriteLine(ReplaceCharacters("aabcdefghijklmnoprstuwxyz"));
 
+ElectricityUsage e1 = new ElectricityUsage(144);
+
+e1.ActualUsage = 145;
+
+Console.WriteLine(e1.ActualUsage);
+
  static string ReplaceCharacters(string text)
  {
      char[] toReplace = new char[] { 'a', 'ą', 'e', 'ę', 'o', 'u', 'ó', 'i', 'y' };
