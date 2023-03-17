@@ -33,3 +33,22 @@ var ab = Quadruple.CalculateDistance(a, b);
 
 Console.WriteLine(ab);
 Console.WriteLine(q1.Circumference);
+
+Console.WriteLine(ReplaceCharacters("aabcdefghijklmnoprstuwxyz"));
+
+ static string ReplaceCharacters(string text)
+ {
+     char[] toReplace = new char[] { 'a', 'ą', 'e', 'ę', 'o', 'u', 'ó', 'i', 'y' };
+
+     for (int i = 0; i < text.Length; i++)
+     {
+         char currentCharacter = text[i];
+
+         if (toReplace.Contains(currentCharacter))
+         {
+             text = text.Replace(currentCharacter, '*');
+         }
+     }
+
+     return text;
+ }
