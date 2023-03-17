@@ -1,4 +1,4 @@
-﻿using System;
+﻿namespace Cw2_programowanie;
 
 public class ElectricityUsage
 {
@@ -30,4 +30,5 @@ public class ElectricityUsage
     {
         return actualUsage - pastUsage;
     }
+
 }
