@@ -1,4 +1,4 @@
-﻿namespace Cw2_programowanie;
+﻿namespace Cw2_programowanie.OrderingSystem;
 
 public static class OrderCreator
 {
@@ -25,12 +25,12 @@ public static class OrderCreator
 
             if (productName == "stop")
                 break;
-            
+
 
             Console.WriteLine("Give quantity: ");
             productQuantity = int.Parse(Console.ReadLine());
 
-            orderDictionary.Add(productName,productQuantity);
+            orderDictionary.Add(productName, productQuantity);
 
             Console.WriteLine();
 

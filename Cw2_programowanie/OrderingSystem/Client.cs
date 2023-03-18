@@ -1,4 +1,4 @@
-﻿namespace Cw2_programowanie;
+﻿namespace Cw2_programowanie.OrderingSystem;
 
 public class Client
 {

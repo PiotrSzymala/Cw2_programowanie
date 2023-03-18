@@ -1,4 +1,4 @@
-﻿namespace Cw2_programowanie;
+﻿namespace Cw2_programowanie.OrderingSystem;
 
 public class Order
 {
@@ -6,7 +6,7 @@ public class Order
     public Dictionary<string, int> OrderedProducts { get; set; }
 
 
-    public Order(Client personWhoOrdered, Dictionary<string,int> orderedProducts)
+    public Order(Client personWhoOrdered, Dictionary<string, int> orderedProducts)
     {
         PersonWhoOrdered = personWhoOrdered;
         OrderedProducts = orderedProducts;

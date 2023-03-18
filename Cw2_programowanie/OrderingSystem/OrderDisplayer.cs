@@ -1,4 +1,4 @@
-﻿namespace Cw2_programowanie;
+﻿namespace Cw2_programowanie.OrderingSystem;
 
 public static class OrderDisplayer
 {
@@ -6,7 +6,7 @@ public static class OrderDisplayer
     {
         Console.WriteLine($"{order.PersonWhoOrdered}'s order: ");
 
-        foreach (KeyValuePair<string,int> product in order.OrderedProducts)
+        foreach (KeyValuePair<string, int> product in order.OrderedProducts)
         {
             Console.WriteLine($"Product: {product.Key}, quantity: {product.Value}");
         }
