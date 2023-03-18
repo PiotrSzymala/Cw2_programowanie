@@ -11,4 +11,8 @@ public class Client
         Surname = surname;
     }
 
+    public override string ToString()
+    {
+        return $"{Name,-8} {Surname,-15} ";
+    }
 }
