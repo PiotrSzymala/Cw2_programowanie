@@ -42,6 +42,19 @@ e1.ActualUsage = 145;
 
 Console.WriteLine(e1.ActualUsage);
 
+
+Client firstClient = new Client("Kamil", "Ślimak");
+
+Order firstOrder = new Order(firstClient, new Dictionary<string, int>()
+{
+    {"Shrimps", 1},
+    {"Penne Arrabiata", 1},
+    {"Sparkling water", 2},
+    {"flan",2}
+});
+
+OrderDisplayer.Display(firstOrder);
+
  static string ReplaceCharacters(string text)
  {
      char[] toReplace = new char[] { 'a', 'ą', 'e', 'ę', 'o', 'u', 'ó', 'i', 'y' };

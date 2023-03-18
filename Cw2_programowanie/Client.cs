@@ -13,6 +13,6 @@ public class Client
 
     public override string ToString()
     {
-        return $"{Name,-8} {Surname,-15} ";
+        return $"{Name} {Surname}";
     }
 }
