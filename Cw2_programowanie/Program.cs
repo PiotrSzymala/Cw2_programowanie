@@ -1,6 +1,6 @@
 ﻿using Cw2_programowanie;
 
-Circle parameterless = new Circle();
+/*Circle parameterless = new Circle();
 Console.WriteLine(parameterless.Ray);
 
 Circle c2 = new Circle(2);
@@ -53,7 +53,10 @@ Order firstOrder = new Order(firstClient, new Dictionary<string, int>()
     {"flan",2}
 });
 
-OrderDisplayer.Display(firstOrder);
+OrderDisplayer.Display(firstOrder);*/
+
+OrderCreator.CreateOrder();
+
 
  static string ReplaceCharacters(string text)
  {
