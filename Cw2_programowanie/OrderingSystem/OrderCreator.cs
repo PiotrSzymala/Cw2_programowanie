@@ -23,15 +23,22 @@ public static class OrderCreator
             Console.WriteLine("Give product's name or type \"stop\" to end: ");
             productName = Console.ReadLine();
 
-            if (productName == "stop")
+            if (productName.ToLower() == "stop")
                 break;
 
 
             Console.WriteLine("Give quantity: ");
-            productQuantity = int.Parse(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(), out int res))
+            {
+                do
+                {
+                    Console.WriteLine("Wrong input! Insert number please: ");
 
+                } while (!int.TryParse(Console.ReadLine(), out res));
+            }
+
+            productQuantity = res;
             orderDictionary.Add(productName, productQuantity);
-
             Console.WriteLine();
 
         } while (true);
