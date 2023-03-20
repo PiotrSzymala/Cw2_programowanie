@@ -1,4 +1,4 @@
-namespace Cw2_programowanie.RegisteringBookSystem;
+namespace Cw2_programowanie.RegisteringBookSystem.Models;
 
 public class Book
 {
