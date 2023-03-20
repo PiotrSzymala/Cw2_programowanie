@@ -8,6 +8,7 @@ public static class BookDisplayer
     {
         foreach (var book in books)
         {
+            Console.WriteLine();
             Console.WriteLine("Author: ");
             foreach (var author in book.Authors)
             {
