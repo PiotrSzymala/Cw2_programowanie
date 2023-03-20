@@ -1,4 +1,6 @@
 ﻿using Cw2_programowanie.OrderingSystem;
+using Cw2_programowanie.RegisteringBookSystem;
+using Cw2_programowanie.RegisteringBookSystem.Models;
 
 /*Circle parameterless = new Circle();
 Console.WriteLine(parameterless.Ray);
@@ -55,9 +57,24 @@ Order firstOrder = new Order(firstClient, new Dictionary<string, int>()
 
 OrderDisplayer.Display(firstOrder);*/
 
-OrderCreator.CreateOrder();
+//OrderCreator.CreateOrder();
 
 
+// Author a1 = new Author("Joseph", null, "Conrad", "Josh");
+// Author a2 = new Author("Leopold", null, "Tyrmand", null);
+//
+//
+// Book b1 = new Book(a1, "Jądro ciemności", "Heart of the Darkness", new DateTime(1899, 04, 03), "WorldCat", 2342455);
+// Book b2 = new Book(a2, "Zły", "Zły", new DateTime(1959, 04, 23), "Wrzos", 34294);
+//
+// var books = new List<Book>()
+// {
+//     b1, b2
+// };
+//
+// BookDisplayer.DisplayBooks(books);
+
+BookManager.Run();
  static string ReplaceCharacters(string text)
  {
      char[] toReplace = new char[] { 'a', 'ą', 'e', 'ę', 'o', 'u', 'ó', 'i', 'y' };
