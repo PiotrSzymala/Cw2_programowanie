@@ -14,4 +14,9 @@ public class Author
         Surname = surname;
         Pseudonym = pseudonym;
     }
+
+    public override string ToString()
+    {
+        return $"Name: {Name}, second name: {SecondName}, surname: {Surname}, pseudonym: {Pseudonym}";
+    }
 }
