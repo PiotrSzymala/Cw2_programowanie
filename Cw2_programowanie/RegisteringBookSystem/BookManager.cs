@@ -23,11 +23,13 @@ public class BookManager
            switch (int.Parse(input))
            {
                case 1:
-                   AddAuthor();
+                   CheckList(AddAuthor);
+                   
                    break;
                    
                case 2:
-                   AddPublisher();
+                   CheckList(AddPublisher);
+                   
                    break; 
                
                case 3:
@@ -127,5 +129,18 @@ public class BookManager
         var publisherToAdd = Console.ReadLine();
         
         result.PublishingCompany.Add(publisherToAdd);
+    }
+
+    private static void CheckList(Action del)
+    {
+        if (Books.Count == 0)
+        {
+            Console.WriteLine("You can't do this, book list is empty. Add book first.");
+            
+        }
+        else
+        {
+            del.Invoke();
+        }
     }
 }
