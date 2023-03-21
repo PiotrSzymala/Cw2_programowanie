@@ -12,7 +12,7 @@ public static class BookDisplayer
             Console.WriteLine("Author: ");
             foreach (var author in book.Authors)
             {
-                Console.WriteLine("\t"+author);
+                Console.WriteLine("  "+author);
             }
 
             Console.WriteLine($"Title: {book.Title}");
@@ -21,7 +21,7 @@ public static class BookDisplayer
             Console.WriteLine($"Publishing company: ");
             foreach (var publisher in book.PublishingCompany)
             {
-                Console.WriteLine("\t"+publisher);
+                Console.WriteLine("  "+publisher);
             }
             Console.WriteLine($"ISBN number: {book.ISBN}");
             Console.WriteLine();
