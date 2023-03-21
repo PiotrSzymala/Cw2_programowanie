@@ -6,7 +6,7 @@ public class Book
     public string Title { get; set; }
     public string OriginalTitle { get; set; }
     public DateTime PublicationDate { get; set; }
-    public string PublishingCompany { get; set; }
+    public List<string> PublishingCompany { get; set; } = new List<string>();
     public int ISBN { get; set; }
 
     public Book(Author author, string title, string originalTitle, DateTime publicationDate, string publishingCompany, int isbn)
@@ -15,7 +15,7 @@ public class Book
         Title = title;
         OriginalTitle = originalTitle;
         PublicationDate = publicationDate;
-        PublishingCompany = publishingCompany;
+        PublishingCompany.Add(publishingCompany);
         ISBN = isbn;
     }
 }
