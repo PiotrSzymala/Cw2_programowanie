@@ -27,7 +27,9 @@ public class BookManager
                    break;
                    
                case 2:
+                   AddPublisher();
                    break; 
+               
                case 3:
                    AddBook();
                    break;
@@ -37,6 +39,7 @@ public class BookManager
                    break;
                
                case 5:
+                   Console.WriteLine("Shutting down...");
                    flag = true;
                    break;
            }
@@ -111,5 +114,18 @@ public class BookManager
 
         var authorToAdd = CreateAuthor();
         result.Authors.Add(authorToAdd);
+    }
+
+    private static void AddPublisher()
+    {
+        Console.WriteLine("To which book you want to add publisher?: ");
+        var search = Console.ReadLine();
+        
+        Book result = Books.First(b => b.Title.Contains(search));
+
+        Console.WriteLine("Give publisher: ");
+        var publisherToAdd = Console.ReadLine();
+        
+        result.PublishingCompany.Add(publisherToAdd);
     }
 }
