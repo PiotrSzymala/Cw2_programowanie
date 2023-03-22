@@ -4,9 +4,9 @@ namespace Cw2_programowanie.RegisteringBookSystem;
 
 public static class BookDisplayer
 {
-    public static void DisplayBooks(List<Book> books)
+    public static void DisplayBooks()
     {
-        foreach (var book in books)
+        foreach (var book in BookManager.Books)
         {
             Console.WriteLine();
             Console.WriteLine("Author: ");
