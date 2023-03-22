@@ -8,8 +8,10 @@ public static class BookDisplayer
     {
         foreach (var book in BookManager.Books)
         {
-            Console.WriteLine();
-            Console.WriteLine("Author: ");
+            var form = book.Authors.Count <= 1 ? "Author": "Authors";
+
+            Console.WriteLine(form);
+            
             foreach (var author in book.Authors)
             {
                 Console.WriteLine("  "+author);
