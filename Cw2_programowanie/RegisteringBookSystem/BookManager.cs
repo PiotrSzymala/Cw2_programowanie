@@ -14,35 +14,40 @@ public class BookManager
     public static void Run()
     {
         ShowMenu();
-        string input;
+       
         bool flag = false;
         do
         {
-           input  = Console.ReadLine();
+           var input  = Console.ReadKey(true);
 
-           switch (int.Parse(input))
+           switch (input.Key)
            {
-               case 1:
-                   CheckList(AddAuthor);
-                   
+               case ConsoleKey.D1:
+                   CheckIsListEmpty(AddAuthor);
                    break;
                    
-               case 2:
-                   CheckList(AddPublisher);
-                   
+               case ConsoleKey.D2:
+                   CheckIsListEmpty(AddPublisher);
                    break; 
                
-               case 3:
+               case ConsoleKey.D3:
                    AddBook();
                    break;
                    
-               case 4:
-                   BookDisplayer.DisplayBooks(Books);
+               case ConsoleKey.D4:
+                   CheckIsListEmpty(BookDisplayer.DisplayBooks);
                    break;
                
-               case 5:
+               case ConsoleKey.D5:
                    Console.WriteLine("Shutting down...");
                    flag = true;
+                   break;
+               
+               default:
+                   Console.WriteLine("Wrong command!");
+                   Console.ReadKey(true);
+                   Console.Clear();
+                   ShowMenu();
                    break;
            }
         } while (!flag);
@@ -53,7 +58,7 @@ public class BookManager
         Console.WriteLine("1 - Add Author to the book.");
         Console.WriteLine("2 - Add Publishing Company to the book.");
         Console.WriteLine("3 - Add Book to the book list.");
-        Console.WriteLine("4- Display books.");
+        Console.WriteLine("4 - Display books.");
         Console.WriteLine("5 - Exit.");
         Console.WriteLine();
     }
@@ -100,11 +105,20 @@ public class BookManager
     }
     private static void AddBook()
     {
+        Console.Clear();
         var authorToAdd = CreateAuthor();
 
         var book = CreateBook(authorToAdd);
         
         Books.Add(book);
+
+        Console.Clear();
+        Console.WriteLine("New book is added.");
+        Console.ReadKey(true);
+        Console.Clear();
+        ShowMenu();
+        
+        
     }
 
     private static void AddAuthor()
@@ -131,16 +145,21 @@ public class BookManager
         result.PublishingCompany.Add(publisherToAdd);
     }
 
-    private static void CheckList(Action del)
+    private static void CheckIsListEmpty(Action del)
     {
+        Console.Clear();
         if (Books.Count == 0)
         {
             Console.WriteLine("You can't do this, book list is empty. Add book first.");
-            
         }
         else
         {
             del.Invoke();
         }
+        
+        Console.ReadKey(true);
+        Console.Clear();
+        ShowMenu();
+        
     }
 }
