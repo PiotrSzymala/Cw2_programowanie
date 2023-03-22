@@ -8,9 +8,9 @@ public static class BookDisplayer
     {
         foreach (var book in BookManager.Books)
         {
-            var form = book.Authors.Count <= 1 ? "Author": "Authors";
+            var authorForm = book.Authors.Count <= 1 ? "Author": "Authors";
 
-            Console.WriteLine(form);
+            Console.WriteLine(authorForm);
             
             foreach (var author in book.Authors)
             {
@@ -20,7 +20,8 @@ public static class BookDisplayer
             Console.WriteLine($"Title: {book.Title}");
             Console.WriteLine($"Original title: {book.OriginalTitle}");
             Console.WriteLine($"Publication date: {book.PublicationDate}");
-            Console.WriteLine($"Publishing company: ");
+            var publishingCompanyForm = book.PublishingCompany.Count <= 1 ? "Publishing company": "Publishing companies";
+            Console.WriteLine(publishingCompanyForm);
             foreach (var publisher in book.PublishingCompany)
             {
                 Console.WriteLine("  "+publisher);
