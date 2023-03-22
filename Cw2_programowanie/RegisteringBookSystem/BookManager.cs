@@ -130,6 +130,12 @@ public class BookManager
 
         var authorToAdd = CreateAuthor();
         result.Authors.Add(authorToAdd);
+        
+        Console.Clear();
+        Console.WriteLine("New author is added.");
+        Console.ReadKey(true);
+        Console.Clear();
+        ShowMenu();
     }
 
     private static void AddPublisher()
@@ -143,6 +149,12 @@ public class BookManager
         var publisherToAdd = Console.ReadLine();
         
         result.PublishingCompany.Add(publisherToAdd);
+        
+        Console.Clear();
+        Console.WriteLine("New publisher is added.");
+        Console.ReadKey(true);
+        Console.Clear();
+        ShowMenu();
     }
 
     private static void CheckIsListEmpty(Action del)
