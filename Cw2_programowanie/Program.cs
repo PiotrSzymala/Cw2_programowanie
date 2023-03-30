@@ -126,3 +126,27 @@ static int SumIndividualDigits(int N)
 
     return numbersThatMeetCondition.Min();
 }
+
+static int SliceOfArray(int[] A) 
+{
+    int startIndex = 0;
+    int endIndex = 0;
+    
+    for (int i = 2; i < A.Length; i++)
+    {
+        if (A[i - 2] >= 0 && A[i-1] <= 0 && A[i]>=0)
+        {
+            endIndex=i;
+        }
+        else if (A[i - 2] <= 0 && A[i-1] >= 0 && A[i]<=0)
+        {
+            endIndex=i;
+        }
+        else
+        {
+            startIndex = i-1;
+        }
+    }
+
+    return startIndex > endIndex-startIndex? startIndex : endIndex-startIndex+1;
+}
