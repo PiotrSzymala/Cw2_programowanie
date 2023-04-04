@@ -1,6 +1,7 @@
 ﻿using Cw2_programowanie.OrderingSystem;
 using Cw2_programowanie.RegisteringBookSystem;
 using Cw2_programowanie.RegisteringBookSystem.Models;
+using Cw2_programowanie.Set6;
 
 /*Circle parameterless = new Circle();
 Console.WriteLine(parameterless.Ray);
@@ -74,8 +75,13 @@ OrderDisplayer.Display(firstOrder);*/
 //
 // BookDisplayer.DisplayBooks(books);
 
-BookManager.Run();
- static string ReplaceCharacters(string text)
+//BookManager.Run();
+
+Fraction fraction = new Fraction(3, 4);
+Console.WriteLine(fraction +" " + fraction);
+
+
+static string ReplaceCharacters(string text)
  {
      char[] toReplace = new char[] { 'a', 'ą', 'e', 'ę', 'o', 'u', 'ó', 'i', 'y' };
 
