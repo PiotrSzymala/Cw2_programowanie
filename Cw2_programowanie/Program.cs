@@ -77,8 +77,9 @@ OrderDisplayer.Display(firstOrder);*/
 
 //BookManager.Run();
 
-Fraction fraction = new Fraction(3, 4);
-Console.WriteLine(fraction +" " + fraction);
+Fraction f1 = new Fraction(3, 5);
+Fraction f2 = new Fraction(2, 11);
+Console.WriteLine($"{f1} + {f2} = {f1+f2}");
 
 
 static string ReplaceCharacters(string text)

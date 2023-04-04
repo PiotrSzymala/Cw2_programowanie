@@ -16,4 +16,18 @@ public struct Fraction
         return $"{Numerator}/{Denominator}";
     }
     
+    public static Fraction  operator+(Fraction f1, Fraction f2)
+    {
+        if (f1.Denominator == f2.Denominator)
+        {
+            return new Fraction(f1.Numerator + f2.Numerator, f1.Denominator);
+        }
+        
+        return new Fraction((f1.Numerator * f2.Denominator) + (f2.Numerator * f1.Denominator), f1.Denominator * f2.Denominator);
+    }
+
+    // public static Fraction ReduceFraction(Fraction fraction)
+    // {
+    //     
+    // }
 }
