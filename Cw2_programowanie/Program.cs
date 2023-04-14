@@ -81,13 +81,33 @@ OrderDisplayer.Display(firstOrder);*/
 // Fraction f2 = new Fraction(3, 6);
 // Console.WriteLine($"{f1} + {f2} = {f1+f2} = {Fraction.ReduceFraction(f1+f2)}");
 // Console.WriteLine($"{f1} - {f2} = {f1-f2} = {Fraction.ReduceFraction(f1-f2)}");
+//
+// Point p1 = new Point(2, 3);
+//
+// Console.WriteLine(p1);
+//
+// p1 = p1 * 2;
+// Console.WriteLine(p1);
 
-Point p1 = new Point(2, 3);
+int[] arr1 = new[] {1,2,3 };
+int[] arr2 = new[] {3,2,1 };
 
-Console.WriteLine(p1);
+Vector v1 = new Vector(arr1);
+Vector v2 = new Vector(arr2);
 
-p1 = p1 * 2;
-Console.WriteLine(p1);
+var v3 = Vector.Multiply(v1, 3);
+
+foreach (var num in v3.Data)
+{
+    Console.WriteLine(num);
+}
+
+// Vector vector = new Vector(4);
+//
+// foreach (var num in vector.Data)
+// {
+//     Console.WriteLine(num);
+// }
 
 static string ReplaceCharacters(string text)
  {
