@@ -77,11 +77,17 @@ OrderDisplayer.Display(firstOrder);*/
 
 //BookManager.Run();
 
-Fraction f1 = new Fraction(2, 3);
-Fraction f2 = new Fraction(3, 6);
-Console.WriteLine($"{f1} + {f2} = {f1+f2} = {Fraction.ReduceFraction(f1+f2)}");
-Console.WriteLine($"{f1} - {f2} = {f1-f2} = {Fraction.ReduceFraction(f1-f2)}");
+// Fraction f1 = new Fraction(2, 3);
+// Fraction f2 = new Fraction(3, 6);
+// Console.WriteLine($"{f1} + {f2} = {f1+f2} = {Fraction.ReduceFraction(f1+f2)}");
+// Console.WriteLine($"{f1} - {f2} = {f1-f2} = {Fraction.ReduceFraction(f1-f2)}");
 
+Point p1 = new Point(2, 3);
+
+Console.WriteLine(p1);
+
+p1 = p1 * 2;
+Console.WriteLine(p1);
 
 static string ReplaceCharacters(string text)
  {

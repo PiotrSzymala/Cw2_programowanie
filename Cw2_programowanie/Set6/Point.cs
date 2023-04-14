@@ -31,5 +31,9 @@ public class Point
 
         return false;
     }
-    
+
+    public override string ToString()
+    {
+        return $"x: {X}, y: {Y}";
+    }
 }
