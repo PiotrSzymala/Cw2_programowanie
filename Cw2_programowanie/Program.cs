@@ -89,18 +89,18 @@ OrderDisplayer.Display(firstOrder);*/
 // p1 = p1 * 2;
 // Console.WriteLine(p1);
 
-int[] arr1 = new[] {1,2,3 };
-int[] arr2 = new[] {3,2,1 };
-
-Vector v1 = new Vector(arr1);
-Vector v2 = new Vector(arr2);
-
-var v3 = Vector.Multiply(v1, 3);
-
-foreach (var num in v3.Data)
-{
-    Console.WriteLine(num);
-}
+// int[] arr1 = new[] {1,2,3 };
+// int[] arr2 = new[] {3,2,1 };
+//
+// Vector v1 = new Vector(arr1);
+// Vector v2 = new Vector(arr2);
+//
+// var v3 = Vector.Multiply(v1, 3);
+//
+// foreach (var num in v3.Data)
+// {
+//     Console.WriteLine(num);
+// }
 
 // Vector vector = new Vector(4);
 //
@@ -108,6 +108,13 @@ foreach (var num in v3.Data)
 // {
 //     Console.WriteLine(num);
 // }
+
+DayFromCalendar d1 = new DayFromCalendar(30, 11, 2003);
+
+
+Console.WriteLine(d1);
+Console.WriteLine((d1 + 3).ToShortDateString());
+Console.WriteLine((d1 - 3).ToShortDateString());
 
 static string ReplaceCharacters(string text)
  {
