@@ -2,6 +2,7 @@
 using Cw2_programowanie.RegisteringBookSystem;
 using Cw2_programowanie.RegisteringBookSystem.Models;
 using Cw2_programowanie.Set6;
+using Cw2_programowanie.Set7;
 
 /*Circle parameterless = new Circle();
 Console.WriteLine(parameterless.Ray);
@@ -109,12 +110,42 @@ OrderDisplayer.Display(firstOrder);*/
 //     Console.WriteLine(num);
 // }
 
-DayFromCalendar d1 = new DayFromCalendar(30, 11, 2003);
+// DayFromCalendar d1 = new DayFromCalendar(30, 11, 2003);
+//
+//
+// Console.WriteLine(d1);
+// Console.WriteLine((d1 + 3).ToShortDateString());
+// Console.WriteLine((d1 - 3).ToShortDateString());
+//
+// DateTime d3 = new DateTime(2023, 01, 03);
+// DateTime d4 = new DateTime(2023, 02, 03);
+//
+// Console.WriteLine(d3 < d4);
+
+Matrix m1 = new Matrix(2);
+Matrix m2 = new Matrix(2);
 
 
-Console.WriteLine(d1);
-Console.WriteLine((d1 + 3).ToShortDateString());
-Console.WriteLine((d1 - 3).ToShortDateString());
+m1.SquareMatrix[0,0] = 2;
+m1.SquareMatrix[0,1] = 7;
+m1.SquareMatrix[1,0] = 4;
+m1.SquareMatrix[1,1] = 5;
+
+m2.SquareMatrix[0,0] = 2;
+m2.SquareMatrix[0,1] = 3;
+m2.SquareMatrix[1,0] = 4;
+m2.SquareMatrix[1,1] = 5;
+
+m1 +=  m2;
+
+
+for (int i = 0; i < m1.SquareMatrix.GetLength(0); i++)
+{
+    for (int j = 0; j < m1.SquareMatrix.GetLength(1); j++)
+    {
+        Console.WriteLine(m1.SquareMatrix[i,j]);
+    }
+}
 
 static string ReplaceCharacters(string text)
  {
