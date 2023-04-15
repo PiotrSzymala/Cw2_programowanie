@@ -126,6 +126,7 @@ Matrix m1 = new Matrix(2);
 Matrix m2 = new Matrix(2);
 
 
+
 m1.SquareMatrix[0,0] = 2;
 m1.SquareMatrix[0,1] = 7;
 m1.SquareMatrix[1,0] = 4;
@@ -136,16 +137,15 @@ m2.SquareMatrix[0,1] = 3;
 m2.SquareMatrix[1,0] = 4;
 m2.SquareMatrix[1,1] = 5;
 
+Matrix.DisplayMatrix(m1);
+Console.WriteLine();
+Matrix.DisplayMatrix(m2);
+Console.WriteLine();
+
 m1 +=  m2;
 
 
-for (int i = 0; i < m1.SquareMatrix.GetLength(0); i++)
-{
-    for (int j = 0; j < m1.SquareMatrix.GetLength(1); j++)
-    {
-        Console.WriteLine(m1.SquareMatrix[i,j]);
-    }
-}
+Matrix.DisplayMatrix(m1);
 
 static string ReplaceCharacters(string text)
  {

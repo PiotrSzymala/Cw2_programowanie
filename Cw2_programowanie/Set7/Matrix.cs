@@ -42,4 +42,17 @@ public class Matrix
 
         return m1;
     }
+    
+    public  static  void DisplayMatrix(Matrix matrix)
+    {
+        for (int i = 0; i < matrix.SquareMatrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.SquareMatrix.GetLength(1); j++)
+            {
+                Console.Write(matrix.SquareMatrix[i,j] + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
 }
